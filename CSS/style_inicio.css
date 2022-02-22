@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+
+}
+
+div#header {
+    background-color: rgb(229, 240, 240);
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+img#logo { 
+    height: 100px; 
+    width: 300px;
+}
+   
+.header_element {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s linear;
+}
+
+a.header_element:hover {
+    background: rgb(133, 133, 133);
+    border-radius: 5px;
+}
+
+carru
+
+   
