@@ -5,4 +5,4 @@ def index(request):
     return render(request, 'jmdr_crowfunding/html/index.html')
 
 def campanas(request):
-    return render(request, 'jmdr_crowfunding/html/encabezado/campanas.html')
+    return render(request, 'jmdr_crowfunding/html/campanas.html')

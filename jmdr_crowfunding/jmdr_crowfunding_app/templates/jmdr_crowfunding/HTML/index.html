@@ -10,9 +10,8 @@
 <body>
     <header>
         <div id="header"> 
-
             <img class="header_element" id="logo" src="static/images/logo_dulce_refugio.png" alt="logo de la funcacion">
-            <a class="header_element" href="{% url 'campanas' %}" target="_blank">campañas</a>
+            <a class="header_element" href="{% url 'campanas' %}" target="_blank">Campañas</a>
             <a class="header_element" href=""target="_blank">¿Quiénes somos?</a>
             <a class="header_element" href=""target="_blank">¿Cómo funciona?</a>
             <a class="header_element" href=""target="_blank">Contáctenos</a>
@@ -26,20 +25,20 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <!-- <div class="numbertext">1 / 3</div> -->
-            <img src="static/images/imagen_title1.jpeg" style="width:100%">
-            <div class="text">Caption Text</div>
+            <img src="{% static 'images/imagen_title1.jpeg' %}" style="width:100%">
+            <div class="text">Entrega de alimentos</div>
         </div>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">2 / 3</div> -->
-            <img src="static/images/imagen_title2.jpeg" style="width:100%">
-            <div class="text">Caption Two</div>
+            <img src="{% static 'images/imagen_title2.jpeg' %}" style="width:100%">
+            <div class="text">Integrantes de la fundación</div>
         </div>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="static/images/imagen_title3.jpeg" style="width:100%">
-            <div class="text">Caption Three</div>
+            <img src="{% static 'images/imagen_title3.jpeg'%}" style="width:100%">
+            <div class="text">Apoyo social</div>
         </div>
 
         <!-- Next and previous buttons -->
@@ -53,6 +52,44 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="all_sections">
+
+        <div class="section">
+
+            <p>Contamos con un equipo dispuesto ayudar las personas con situacion de pobreza en la Parroquia El Carmen y cualquier sitio del municipio Simon Bolivar. </p>
+            <img src="{% static '/images/photo_section1.jpeg'%}" alt="integrantes" class="section_img">
+        </div>
+
+        <div class="section no_image">   
+            <h4>Juan 13:34</h4> 
+            <p> Un mandamiento nuevo os doy: Que os améis unos a otros; como yo os he amado, que también os améis los unos a los otros.</p>
+        </div>
+
+        <div class="section no_image">
+            <h4>Mateo 20:28</h4>
+            <p>Así como el Hijo del Hombre no vino para ser servido, sino para servir y para dar su vida en rescate por muchos.</p>
+        </div>
+
+        <div class="section">
+
+            <p>La educación es el arma más potente que puedes usar para cambiar el mundo (Nelson Mandela).</p>
+            <p>Realizamos charlas en instituciones educativas sobre temas como la educacion sexual, el bulling, No a las Drogas, enseñanzas cristianas entre otros.</p>
+            {% comment %} <p>Hacemos donaciones de utiles escolares ayudando a mas de 60 niños y adolecentes por institucion que no cuentan con el material necesario para estudiar.</p> {% endcomment %}
+            <img src="{% static '/images/photo_section2.jpeg'%}" alt="educacion" class="section_img">
+         </div>
+
+        <div class="section">
+            <p>Recibimos ayuda de de los integrantes de las iglesias Centro Familiar Cristiano Peniel en lecheria e Iglesia Bautista Memorial ubicada en boyaca V. </p>
+            <img src="{% static '/images/imagen_title4.jpeg'%}" alt="" class="section_img">
+        </div>
+
+        <div class="section no_image long">
+            <h4>Gálatas 5:13-14</h4>
+            <p>13 Porque vosotros, hermanos, a libertad habéis sido llamados; solamente que no uséis la libertad como ocasión para la carne, sino servíos por amor los unos a los otros.</p>
+            
+            <p>14 Porque toda la ley en esta sola palabra se cumple: Amarás a tu prójimo como a ti mismo.</p>
+        </div>
     </div>
     <script src="static/SCRIPT/script_f.js"></script>
 </body>
