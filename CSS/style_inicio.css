@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: rgb(182, 224, 250);
 
 }
 
@@ -8,7 +9,9 @@ div#header {
     height: 130px;
     width: 100%;
     display: flex;
+    flex-flow: row nowrap;
     align-items: center;
+    justify-content: center;
 }
 
 img#logo { 
@@ -35,128 +38,6 @@ a.header_element:hover {
     border-radius: 5px;
 }
 
-.carrusel {
-    width: 80%;
-    max-width: 120em;
-    background-color: lightskyblue;
-
-
-}
-.carrusel .grande{
-    width: 200%;
-
-    background-color: orange;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-
-    transition: all .5s ease;
-    transform: translateX(0%);
-
-}
-.carrusel .img{
-    width: calc(100% / 4);
-
-
-    background-color: lime;
-    
-}
-.carrusel .puntos{
-    width: 100%;
-    background-color: red;
-    padding: 1em;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-
-}
-.carrusel .punto{
-    width: 2em;
-    height: 2em;
-    background-color: blue;
-    margin: 1em;
-}
-.carrusel .punto.activo{
-    background-color: rgb(44, 223, 28);
-}
-/* INTENTO 2 */
-/* .carousel-container {
-    width: 600px;
-    height: 400px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.navigation .prev {
-    position: absolute;
-    z-index: 10;
-    font-size: 25px;
-    top: 40%;
-    left: 10px;
-    font-weight: 700;
-  }
-
-.navigation .next {
-    right: 10px;
-    position: absolute;
-    font-size: 25px;
-    z-index: 10;
-    top: 40%;
-}
-
-.navigation .nav-btn {
-    background: rgba(255, 255, 255, 0.55);
-    cursor: pointer;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.navigation .nav-btn:hover {
-    background: white;
-}
-
-.carousel {
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-.carousel img {
-    width: 100%;
-    transition: opacity 0.3s ease-in-out;
-    border:8px solid black;
-}
-
-.item {
-    position: absolute;
-    display: none;
-}
-
-.main {
-    display: block;
-}
-
-.caption {
-    position: absolute;
-    bottom: 0;
-    width: 103%;
-    display: flex;
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.3);
-    height: 35px;
-} */
-
-/* INTENTO 3 */
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -164,7 +45,7 @@ a.header_element:hover {
     max-width: fit-content;
     margin: auto;
     position: relative;
-    margin: 0 auto;
+    margin-top: 60px;
 }
 
 /* Hide the images by default */
@@ -175,6 +56,7 @@ a.header_element:hover {
 .mySlides > img {
     width: 100%;
     height: 600px;
+    
 }
 
 /* Next & previous buttons */
@@ -206,13 +88,26 @@ a.header_element:hover {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: #f1f1f1f1;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; 
+  transition: all 0.4s linear;
+}
+
+.text:hover {
+  background-color: #717171be;
+  color: #f1f1f1f1;
+  font-size: 25px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+ 
 }
 
 /* Number text (1/3 etc) */
@@ -230,10 +125,12 @@ a.header_element:hover {
   height: 15px;
   width: 15px;
   margin: 0 2px;
+  margin-top: 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  
 }
 
 .active, .dot:hover {
@@ -256,4 +153,23 @@ a.header_element:hover {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.all_sections{
+
+}
+
+.section{
+
+}
+
+.verse{
+  display: grid;
+
+}
+
+.section_img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
 }
