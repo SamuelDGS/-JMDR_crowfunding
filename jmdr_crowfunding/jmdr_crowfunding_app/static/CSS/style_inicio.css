@@ -161,35 +161,39 @@ a.header_element:hover {
     column-gap: 5px;
     row-gap: 5px;
     grid-auto-rows: minmax(100px, auto);
-    /* grid-column: 2; */
 }
 
 .section{
-    background-color: #81b3ff;
+    /* background-color: #81b3ff; */
     /* display: ; */
     justify-content: center;
     align-content: center;
+    padding-top: 25px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .section:hover {
     background-color: #5c83bd ;
     transition: all 0.4s linear;
+    border-radius: 10%;
 }
 
 .no_image > p, h4 {
     font-size: 50px;
     font-style: italic;
-    padding-top: 70px 0;
-    margin-top: 70px 0;
     text-align: center;
+}
+
+.w_image > p {
+    align-content: center;
+    text-align: center;
+    font-style: italic;
 }
 
 .section > p, h4 {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
-    /* align-content: center; */
     padding: 10px;
 }
 
@@ -202,11 +206,11 @@ a.header_element:hover {
 }
 
 .section_img {
-    width: max-content;
+    width: 350px;
     height: 350px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     display: block;
-    /* border-radius: 50%; */
+    border-radius: 25%;
 }
