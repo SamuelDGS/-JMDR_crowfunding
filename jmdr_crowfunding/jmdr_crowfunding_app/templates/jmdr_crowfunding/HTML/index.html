@@ -12,10 +12,9 @@
         <div id="header"> 
             <img class="header_element" id="logo" src="static/images/logo_dulce_refugio.png" alt="logo de la funcacion">
             <a class="header_element" href="{% url 'campanas' %}" target="_blank">Campañas</a>
-            <a class="header_element" href=""target="_blank">¿Quiénes somos?</a>
-            <a class="header_element" href=""target="_blank">¿Cómo funciona?</a>
-            <a class="header_element" href=""target="_blank">Contáctenos</a>
-            <button class="header_element">Iniciar sesion</button>
+            <a class="header_element" href="{% url 'quienes_somos' %}" target="_blank">¿Quiénes somos?</a>
+            <a class="header_element" href="{% url 'como_funciona' %}" target="_blank">¿Cómo funciona?</a>
+            <a class="header_element" href="{% url 'contacto' %}" target="_blank">Contáctenos</a>
         </div>
     </header>
 

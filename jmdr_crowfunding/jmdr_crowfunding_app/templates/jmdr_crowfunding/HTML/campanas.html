@@ -4,7 +4,7 @@
         <title></title>
         <meta charset="UTF-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'CSS/style_inicio.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/style_campana.css' %}">
     </head>
     <body>
         <header>
@@ -12,5 +12,24 @@
                 <img class="header_element" id="logo" src="{% static 'images/logo_dulce_refugio.png' %}" alt="logo de la funcacion">
             </div>
         </header>
+        <div class="all_campaign">
+
+            <div class="campaing">
+                <a class="campaing_text" href="{% url 'entrega_alimentos' %}"><h2>Entrega de Alimentos</h2></a>
+                <img class="campaing_photo" src="../../../static/images/photo_food.jpeg" alt="food">
+
+            </div>
+
+            <div class="campaing">
+                <a class="campaing_text" href="{% url 'asistencia_medica' %}"><h2>Asistencia Medica</h2></a>
+                <img class="campaing_photo" src="../../../static/images/photo_medical _assistance.jpeg" alt="medical assistance">
+            </div>
+
+            <div class="campaing">
+                <a class="campaing_text" href="{% url 'educacion' %}"><h2> Educación</h2></a>
+                <img class="campaing_photo" src="../../../static/images/photo_education.jpeg" alt="educacion">
+            </div>
+
+        </div>
     </body>
 </html>

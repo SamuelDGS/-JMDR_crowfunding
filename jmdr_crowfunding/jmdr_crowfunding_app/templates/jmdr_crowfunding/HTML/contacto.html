@@ -3,12 +3,13 @@
     <head>
         <title></title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../CSS/style_campanas.css">       
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CSS/style_contacto.css' %}">       
     </head>
     <body>
         <header>
             <div id="header"> 
-                <img class="header_element" id="logo" src="../../images/logo_dulce_refugio.png" alt="logo de la funcacion">
+                <img class="header_element" id="logo" src="{% static 'images/logo_dulce_refugio.png' %}" alt="logo de la funcacion">
             </div>
         </header>
     </body>

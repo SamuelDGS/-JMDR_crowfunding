@@ -21,5 +21,12 @@ from jmdr_crowfunding_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('campanas/', views.campanas, name='campanas')
+    path('campanas/', views.campanas, name='campanas'),
+    path('quienes_somos/', views.quienes_somos, name='quienes_somos'),
+    path('como_funciona/', views.como_funciona, name='como_funciona'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('entrega_alimentos/', views.entrega_alimentos, name='entrega_alimentos'),
+    path('asistencia_medica/', views.asistencia_medica, name='asistencia_medica'),
+    path('educacion/', views.educacion, name='educacion'),
+
 ]
