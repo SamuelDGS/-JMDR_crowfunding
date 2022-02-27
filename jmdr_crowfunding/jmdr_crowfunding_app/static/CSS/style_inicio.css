@@ -29,7 +29,7 @@ img#logo {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 17px;
     text-decoration: none;
-    color: black;
+    color: #202020; 
     transition: all 0.4s linear;
 }
 
@@ -96,6 +96,7 @@ a.header_element:hover {
   width: 100%;
   text-align: center; 
   transition: all 0.4s linear;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .text:hover {
@@ -108,15 +109,6 @@ a.header_element:hover {
     width: 100%;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -161,6 +153,7 @@ a.header_element:hover {
     column-gap: 5px;
     row-gap: 5px;
     grid-auto-rows: minmax(100px, auto);
+    color: #202020; 
 }
 
 .section{
@@ -213,4 +206,21 @@ a.header_element:hover {
     margin-bottom: 25px;
     display: block;
     border-radius: 25%;
+}
+
+.footer{ 
+  background-color: rgb(229, 240, 240);
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo_footer{ 
+  height: 180px; 
+  width: 280px;
+  padding-left: 20px;
 }

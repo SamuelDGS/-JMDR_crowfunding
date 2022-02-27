@@ -18,3 +18,24 @@ img#logo {
     height: 100px; 
     width: 300px;
 }
+
+.contacto{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #202020; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: left; 
+    background: #889ccf; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    padding: 20px; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 2px solid #5878ca;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 120px;
+    line-height: 35px;
+}
+
