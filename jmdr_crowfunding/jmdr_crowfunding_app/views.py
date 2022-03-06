@@ -1,3 +1,6 @@
+from django.http import HttpResponse, HttpResponseRedirect
+from jmdr_crowfunding_app.forms import DonationForm
+from jmdr_crowfunding_app.models import Donation
 from django.shortcuts import render
 
 # Create your views here.
@@ -17,7 +20,28 @@ def contacto(request):
     return render(request, 'jmdr_crowfunding/HTML/contacto.html')
 
 def entrega_alimentos(request):
-    return render(request, 'jmdr_crowfunding/HTML/entrega_alimentos.html')
+    if request.method == 'POST':
+        form = DonationForm(request.POST)
+        if form.is_valid():
+            # donation = Donation()
+            # donation.donor = form.donor
+            # donation.amount = form.amount
+            # donation.save()
+            form.save()
+            return HttpResponseRedirect('/entrega_alimentos/')
+    else:
+        form = DonationForm()
+        data = {
+            'donations': [
+                {
+                    'donor': donation.donor,
+                    'amount': donation.amount,
+                    'date_time': donation.date_time
+                } for donation in Donation.objects.all()
+            ],
+            'form': form
+        }
+    return render(request, 'jmdr_crowfunding/HTML/entrega_alimentos.html', data)
 
 def asistencia_medica(request):
     return render(request, 'jmdr_crowfunding/HTML/asistencia_medica.html')
