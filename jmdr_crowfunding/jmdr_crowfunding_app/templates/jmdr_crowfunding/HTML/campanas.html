@@ -31,5 +31,24 @@
             </div>
 
         </div>
+        {% comment %} <div class="supporters_container parrafo">
+            <h2> Personas que han dado su apoyo: </h2>
+            <ul class="supporters_list">
+                {% for supporter in supporters %}
+                    <li class="supporter_item"> 
+                        <h3 class="donor_name">{{donation.donor}}</h3>
+                        <p class="amount">{{donation.amount}} {{donation.currency}}</p>
+                        <p class="date">{{donation.date_time}}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div> {% endcomment %}
+        <div class="form_container">
+            <form action="{% url 'agregar_soporte' %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="apoyar">
+            </form>
+        </div>
     </body>
 </html>

@@ -28,5 +28,5 @@ urlpatterns = [
     path('entrega_alimentos/', views.entrega_alimentos, name='entrega_alimentos'),
     path('asistencia_medica/', views.asistencia_medica, name='asistencia_medica'),
     path('educacion/', views.educacion, name='educacion'),
-
+    path('agregar_soporte/', views.agregar_soporte, name='agregar_soporte'),
 ]
