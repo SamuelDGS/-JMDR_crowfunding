@@ -10,7 +10,8 @@ def index(request):
 def campanas(request):
     if request.method == 'GET':
         form = SupportForm()
-        data = {'form': form}
+        total = len(Support.objects.all())
+        data = {'form': form, 'supporters_total': total}
     return render(request, 'jmdr_crowfunding/HTML/campanas.html', data)
     
 def quienes_somos(request):
