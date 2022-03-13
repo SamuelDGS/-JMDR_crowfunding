@@ -43,11 +43,17 @@
                 {% endfor %}
             </ul>
         </div> {% endcomment %}
+
+        <div class="inf">
+            <h2>Solicitud de apoyo para las actividades</h2>
+            <p>Si usted desea apoyar a la fundacion asistiendo a las actividades debe llenar este formulario y enviar su respuesta que se evaluara en 24horas. Recibira un correo con las especificaciones y el dia que debe asistir a la actividad que eliga.</p>
+        </div>
+
         <div class="form_container">
             <form action="{% url 'agregar_soporte' %}" method="post">
                     {% csrf_token %}
                     {{ form }}
-                    <input type="submit" value="apoyar">
+                    <input type="submit" value="Apoyar">
             </form>
         </div>
     </body>
