@@ -13,22 +13,38 @@
             </div>
         </header>      
 
-            <div class="donate3">
-
-                <div class="parrafo">
-                     <img src="{% static 'images/photo_donate3.jpg' %}" alt="donate3">
-                    <h2>Educación</h2>
-                    
-                    <p>Si decides donar en el area de educacion estaras apoyando las actividades para las intituciones educativas de la parroquia el Carmen y el municipio Simon Bolivar. En las actidades se realizan charlas, educacion sexual, no a las drogas, bulling entre otros. A los estudiantes que no cuentan con utiles escolares se les ayuda donandoles bolsos, cuadernos, lapices, borras entre otros. </p>    
+        <div class="donate3">
+            <div class="parrafo">
+                <img src="{% static 'images/photo_donate3.jpg' %}" alt="donate3">
+                <h2>Educación</h2>
                 
-                    <h2>Metodo de donacion: Pago movil </h2>
-    
-                    <ul>
-                        <li>Banco plaza-0138</li>
-                        <li>C.I:8.286.263</li>
-                        <li>0412-0888793</li>
-                    </ul>
-                </div>
-            </div>     
+                <p>Si decides donar en el area de educacion estaras apoyando las actividades para las intituciones educativas de la parroquia el Carmen y el municipio Simon Bolivar. En las actidades se realizan charlas, educacion sexual, no a las drogas, bulling entre otros. A los estudiantes que no cuentan con utiles escolares se les ayuda donandoles bolsos, cuadernos, lapices, borras entre otros. </p>    
+            
+                <h2>Metodo de donacion: Pago movil </h2>
+
+                <ul>
+                    <li>Banco plaza-0138</li>
+                    <li>C.I:8.286.263</li>
+                    <li>0412-0888793</li>
+                </ul>
+            </div>
+            <form class="donations" action="{% url 'entrega_alimentos' %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Donar">
+            </form>
+        </div>
+        <div class="donations_container parrafo">
+            <h2>Donaciones Recientes</h2>
+            <ul class="donations_list">
+                {% for donation in donations %}
+                    <li class="donation_item"> 
+                        <h3 class="donor_name">{{donation.donor}}</h3>
+                        <p class="amount">{{donation.amount}} {{donation.currency}}</p>
+                        <p class="date">{{donation.date_time}}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </body>
 </html>

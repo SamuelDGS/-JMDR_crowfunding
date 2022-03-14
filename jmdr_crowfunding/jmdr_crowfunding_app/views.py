@@ -27,10 +27,6 @@ def entrega_alimentos(request):
     if request.method == 'POST':
         form = DonationForm(request.POST)
         if form.is_valid():
-            # donation = Donation()
-            # donation.donor = form.donor
-            # donation.amount = form.amount
-            # donation.save()
             form.save()
             return HttpResponseRedirect('/entrega_alimentos/')
     else:
@@ -58,7 +54,41 @@ def agregar_soporte(request):
     #     data = 
 
 def asistencia_medica(request):
-    return render(request, 'jmdr_crowfunding/HTML/asistencia_medica.html')
+    if request.method == 'POST':
+        form = DonationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/asistencia_medica/')
+    else:
+        form = DonationForm()
+        data = {
+            'donations': [
+                {
+                    'donor': donation.donor,
+                    'amount': donation.amount,
+                    'date_time': donation.date_time
+                } for donation in Donation.objects.all()
+            ],
+            'form': form
+        }
+    return render(request, 'jmdr_crowfunding/HTML/asistencia_medica.html', data)
 
 def educacion(request):
-    return render(request, 'jmdr_crowfunding/HTML/educacion.html')
+    if request.method == 'POST':
+        form = DonationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/educacion/')
+    else:
+        form = DonationForm()
+        data = {
+            'donations': [
+                {
+                    'donor': donation.donor,
+                    'amount': donation.amount,
+                    'date_time': donation.date_time
+                } for donation in Donation.objects.all()
+            ],
+            'form': form
+        }
+    return render(request, 'jmdr_crowfunding/HTML/educacion.html', data)

@@ -29,7 +29,24 @@
                     <li>0412-0888793</li>
                 </ul>
             </div>
+            <form class="donations" action="{% url 'entrega_alimentos' %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Donar">
+            </form>
+        </div>
 
+        <div class="donations_container parrafo">
+            <h2>Donaciones Recientes</h2>
+            <ul class="donations_list">
+                {% for donation in donations %}
+                    <li class="donation_item"> 
+                        <h3 class="donor_name">{{donation.donor}}</h3>
+                        <p class="amount">{{donation.amount}} {{donation.currency}}</p>
+                        <p class="date">{{donation.date_time}}</p>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </body>
 </html>
