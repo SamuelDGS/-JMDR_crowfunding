@@ -12,18 +12,13 @@
                 <img class="header_element" id="logo" src="{% static 'images/logo_dulce_refugio.png' %}" alt="logo de la funcacion">
             </div>
         </header>
-        <div class="donate1">
 
+        <div class="donate1">
             <div class="parrafo">
                 <img src="{% static 'images/photo_donate1.jpg' %}" alt="photo_donate2">
                 <h2>Entrega de alimentos.</h2>
                 <p>Si decide donar en el área de entrega de alimentos estaría apoyando las actividades que realizamos para ayudar a las personas en situación de pobreza  en la parroquia El Carmen y el minicipio Simón Bolívar. En estas actividades se preparan en ocasiones cereales, sopas o entregamos alimentos de la cesta básica para a las personas de extrema necesidad, dándoles un mensajes de amor y esperanza. Tomando en consideración la instrucción de Dios de ayudar al prójimo.</p>
 
-                <form class="donations" action="{% url 'entrega_alimentos' %}" method="post">
-                    {% csrf_token %}
-                    {{ form }}
-                    <input type="submit" value="Donar">
-                </form>
                 <h2>Método de donacion: Pago móvil </h2>
 
                 <ul>
@@ -31,8 +26,12 @@
                     <li>C.I:8.286.263</li>
                     <li>0412-0888793</li>
                 </ul>
-                
-                
+                    <p> si no desea que sepamos su nombre, puede escribir anonimo en "nombre del donante" </p>
+                <form class="donations" action="{% url 'entrega_alimentos' %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Donar">
+                </form>
             </div>
         </div>
 
